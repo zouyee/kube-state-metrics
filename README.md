@@ -158,9 +158,10 @@ metrics right away.
 
 When developing, test a metric dump against your local Kubernetes cluster by
 running:
+       > kubeconfig must be set to a valid file(kubeconfig default file name: $HOME/.kube/config)
 
 	go install
-	kube-state-metrics --apiserver=<APISERVER-HERE> --in-cluster=false --port=8080
+	kube-state-metrics --apiserver=<APISERVER-HERE> --in-cluster=false --port=8080 --kubeconfig=<KUBE-CONFIG-HERE>
 
 Then curl the metrics endpoint
 
